@@ -1,0 +1,34 @@
+{
+  "name": "nitstore",
+  "version": "1.0.0",
+  "description": "This is an online sell and buy web application.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Shubham Duhan",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cloudinary": "^1.14.0",
+    "connect-flash": "^0.1.1",
+    "connect-mongodb-session": "^2.2.0",
+    "csurf": "^1.10.0",
+    "dotenv": "^8.1.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "mongoose": "^5.7.5",
+    "multer": "^1.4.2",
+    "multer-storage-cloudinary": "^2.2.1",
+    "nodemailer": "^6.7.5",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "uniqid": "^5.0.3",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}

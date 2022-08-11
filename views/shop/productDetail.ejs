@@ -1,0 +1,87 @@
+<%- include('../includes/start.ejs') %>
+
+    <script>
+        /***************************************  maintain aspect ratio  ************************************/
+
+        const maintainAspectRatio = img => {
+            let imgWidth = img.width;
+            let imgHeight = img.height;
+            let parentWidth = img.parentNode.clientWidth;
+            let parentHeight = img.parentNode.clientHeight;
+            img.style.margin = 'auto';
+            // console.log(img.parentNode.clientWidth);
+            // console.log(img.parentNode.clientHeight);
+            if (imgWidth/imgHeight > parentWidth/parentHeight) {
+                img.style.width = '95%';
+            } else {
+                img.style.height = '95%';
+            }
+            console.log('Image width = ' + imgWidth);
+            console.log('Image height = ' + imgHeight);
+        };
+
+    </script>
+
+</head>
+
+<body>
+    <%- include('../includes/navbar.ejs') %>
+
+    <section class="product-detail-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 ">
+                    <div class="product-detail-image-container">
+                        <img src="<%= product.imageURL %>" onload="maintainAspectRatio(this);">
+                    </div>
+                    <% if (isLoggedIn) { %>
+                        <% if(rollNo !== seller.rollNo) { %>
+                            <input name="product_id" value="<%= product._id %>" hidden>
+                            <input name="rollNo" value="<%= rollNo %>" hidden>
+                            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                            <button class="btn theme-hover-btn-inverse btn-block" onclick="notifySeller(this);">NOTIFY SELLER ABOUT ME</button>
+                            <p class="green-color text-center" name="notify_message"></p>
+                        <% } else { %>
+                            <div class="row mb-2">
+                                <div class="col-6">
+                                    <a href="/<%= rollNo %>/product/<%= product._id %>/edit">
+                                        <button class="btn btn-block theme-hover-btn-inverse">EDIT</button>
+                                    </a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="/<%= rollNo %>/product/<%= product._id %>/delete/<%= product.imagePublicId.split('/')[1] %>">
+                                        <button class="btn btn-block theme-hover-btn-inverse">DELETE</button>
+                                    </a>
+                                </div>
+                            </div>
+                        <% } %>
+                    <% } %>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="fields-container">
+                        <% if (product.price != 0) { %>
+                            <h1 class="product-detail-price">Rs. <%= product.price %></h1>
+                            <% } %>
+                        <h1 class="product-detail-shortdesc"><%= product.shortdesc %></h1>
+                    </div>
+
+                    <div class="fields-container">
+                        <h1 class="heading-3">Product Description</h1>
+                        <p class="seller-field"><%= product.description %></p>
+                    </div>
+
+                    <div class="fields-container">
+                        <h1 class="heading-3">Seller Description</h1>
+                        <h1 class="seller-field"><span>Name:</span> <%= seller.name %></h1>
+                        <h1 class="seller-field"><span>Roll Number:</span> <%= seller.rollNo %></h1>
+                        <h1 class="seller-field"><span>Mobile:</span> <%= product.mobile %></h1>
+                        <h1 class="seller-field"><span>Email:</span> <%= product.email %></h1>
+                    </div>
+                        
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <%- include('../includes/end.ejs') %>              
+    

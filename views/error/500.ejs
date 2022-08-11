@@ -1,0 +1,20 @@
+<%- include('../includes/start.ejs') %>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md sticky-top navbar-dark" style="background-color: #112D37">
+        <div class="container">
+            <a class="navbar-brand" style="color: white" href="/"><img src="/images/nitkLogo.png" class="img-responsive"
+                    height="40px"></a>
+        </div>
+    </nav>
+    <section class="text-center">
+        <h1 class="text-danger">
+            Internal Server Error
+        </h1>
+        <h2><%= errorMessage %></h2>
+        <p>We are trying to solve this issue.</p>
+        <p>Sorry For The Inconvenience!</p>
+    </section>
+    <%- include('../includes/end.ejs') %>

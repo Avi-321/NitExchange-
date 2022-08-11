@@ -1,0 +1,360 @@
+/**********************  common  **********************/
+
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 300px;
+    font-family: 'Raleway';
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+section {
+    padding: 40px 0;
+}
+
+.heading-1 {
+    font-size: 40px;
+}
+
+.heading-2 {
+    font-size: 36px;
+}
+
+.heading-3 {
+    font-size: 32px;
+}
+
+.heading-4 {
+    font-size: 28px;
+}
+
+.heading-5 {
+    font-size: 24px;
+}
+
+.heading-6 {
+    font-size: 20px;
+}
+
+.theme-color {
+    color: #122D37;
+}
+
+.red-color {
+    color: red;
+}
+
+.green-color {
+    color: green;
+}
+
+.theme-bgcolor {
+    background-color: #122D37;
+}
+
+.theme-hover-btn {
+    color: white;
+    background-color: #122D37;
+    border: 1px solid white;
+    box-shadow: none;
+    font-weight: 600;
+}
+
+.theme-hover-btn:hover {
+    color: #122D37;
+    background-color: white;
+    border-color: #122D37;
+}
+
+.theme-hover-btn-inverse {
+    color: #122D37;
+    background-color: white;
+    border: 1px solid #122D37;
+    box-shadow: none;
+    font-weight: 600;
+}
+
+.theme-hover-btn-inverse:hover {
+    color: white;
+    background-color: #122D37;
+    border-color: white;
+}
+/*****************  bootstrap customisation  **********/
+
+.form-control,
+.form-control:active,
+.form-control:focus {
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.navbar .dropdown-item:active {
+    background-color: #122D37;
+}
+
+/**********************  login  ***********************/
+
+#loginFormContainer {
+    width: 40%;
+    min-width: 500px;
+    margin: auto;
+    padding: 60px 30px;
+    background-image: linear-gradient(#122D37dd, #122D37dd), url('../images/loginFormBG.jfif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 576px) {
+    #loginFormContainer {
+        width: 90%;
+        min-width: 100px;
+    }
+}
+
+/**********************  signup  **********************/
+
+#signupFormContainer {
+    width: 40%;
+    min-width: 500px;
+    margin: auto;
+    padding: 30px;
+    background-image: linear-gradient(#122D37dd, #122D37dd), url('../images/loginFormBG.jfif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 576px) {
+    #signupFormContainer {
+        width: 90%;
+        min-width: 100px;
+    }
+}
+
+/********************* sell product  ******************/
+
+#sellProductFormContainer {
+    width: 40%;
+    min-width: 500px;
+    margin: auto;
+    padding: 30px;
+    background-image: linear-gradient(#122D37dd, #122D37dd), url('../images/loginFormBG.jfif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 576px) {
+    #sellProductFormContainer {
+        width: 90%;
+        min-width: 100px;
+    }
+}
+
+/*****************  homepage  **************************/
+
+#searchBarSection .form-control {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 2px solid #aaa;
+}
+
+@media only screen and (max-width: 575.5px) {
+    #searchBarSection .form-control {
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+}
+
+#searchBarSection .form-control:focus {
+    border-color: #122d37;
+    box-shadow: none;
+}
+
+#productsSection {
+    padding: 30px 0;
+}
+
+.productCol {
+    padding: 2px;
+}
+
+.productContainer {
+    background-color: #122d3720;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.productContainer:hover {
+    background-color: #122d3730;
+}
+
+.productContainer button {
+    z-index: 1000;
+}
+
+.productImageContainer {
+    height: 200px;
+}
+
+.productName {
+    font-size: 14px;
+    /* font-weight: 400; */
+    color: #122d37;
+     
+}
+
+
+.productPrice {
+    font-size: 25px;
+    color: black;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+#sortFilterSection {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    padding: 0px;
+    width: 100%;
+    font-size: 20px;
+}
+
+#sortFilterSection .col-6 {
+    padding: 5px 0;
+    background-color: #ccc;
+}
+
+#sortFilterSection .col-6:hover {
+    background-color: #aaa;
+}
+
+
+
+/*****************  product detail  ********************/
+
+.product-detail-image-container {
+    border: 1px solid black;
+    width: 100%;
+    /* max-height: 500px; */
+    margin-bottom: 10px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.product-detail-image-container img {
+    display: block;
+    margin: auto;
+}
+
+.product-detail-image-container:hover {
+    box-shadow: 0 0 3px;
+}
+
+.fields-container {
+    width: 100%;
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.fields-container:hover {
+    box-shadow: 0 0 3px;
+}
+
+.product-detail-price {
+    font-size: 50px;
+}
+
+.product-detail-shortdesc {
+    font-size: 20px;
+}
+
+.seller-field {
+    font-size: 20px;
+}
+
+.seller-field span {
+    font-weight: 600;
+}
+
+/****************  notifications page  *****************/
+
+#notificationsSection .container {
+    max-width: 800px;
+}
+
+#notificationsSection .col-12 {
+    padding: 4px;
+    transition: 0.4s;
+}
+
+/* #notificationsSection .col-12:hover {
+    padding: 1px;
+} */
+
+#notificationsSection p {
+    color: black;
+    margin: 0;
+    padding: 0;
+    transition: 0.2s;
+}
+
+.notificationContainer {
+    padding: 15px;
+    background-color: white;
+    border: 1px solid rgba(18, 45, 55, 0.5);
+    color: black;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.notificationContainer:hover {
+    box-shadow: 0 0 11px -6px;
+    color: #122D37;
+    padding: 25px 15px;
+}
+
+.notificationDate {
+    font-size: 12px;
+}
+
+.notificationContainer:hover > p {
+    font-size: 20px;
+}
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
+ .a{
+    font-size: 20px;
+    font-weight: bold;
+ }
+ .footer {
+     background-color: #122d3730;
+    /* position: relative;
+    padding: 
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center; */
+}
